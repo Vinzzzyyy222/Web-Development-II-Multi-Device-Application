@@ -1,0 +1,157 @@
+/* Reset and Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --bg-color: #160d07;
+    --text-color: #fffdee;
+    --main-color: #ffa86a;
+    --other-color: #d6d4c8;
+    --second-color: #ffffff4f;
+    --alt-color: #7d5537;
+
+    --h1-font: 7.5rem;
+    --h2-font: 5.5rem;
+    --p-font: 1.1rem;
+}
+
+/* Body Styles */
+body {
+    color: var(--text-color);
+    background: linear-gradient(250.55deg, #120b07 0%, #311b0d 28.55%, #160d07 75.55%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navigation Styles */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav a {
+    display: inline-block;
+    font-size: var(--p-font);
+    color: var(--other-color);
+    font-weight: 500;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--main-color);
+}
+
+/* Container for the content */
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--second-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: var(--h2-font);
+    color: var(--main-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--other-color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--alt-color);
+    transform: scale(1.05);
+}
+
+/* Error Message Styles */
+p {
+    margin: 10px 0;
+}
+
+#error {
+    color: red;
+}
+
+#signup-success {
+    color: green;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Loading Indicator */
+#loading {
+    text-align: center;
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: var(--h2-font);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
